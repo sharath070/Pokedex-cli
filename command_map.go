@@ -26,7 +26,7 @@ func commandMapB(cfg *config, args ...string) error {
 		return errors.New("you're on the first page")
 	}
 
-	locationResp, err := cfg.pokeApiClient.ListLocations(cfg.nextLocationUrl)
+	locationResp, err := cfg.pokeApiClient.ListLocations(cfg.prevLocationUrl)
 	if err != nil {
 		return err
 	}
